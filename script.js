@@ -4,7 +4,9 @@ const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 const resultLine = document.getElementById("resultLine");
 const resultSubline = document.getElementById("resultSubline");
-const campusSliderImage = document.getElementById("campusSliderImage");
+const admissionSliderImage = document.getElementById("admissionSliderImage");
+const updatesSliderImage = document.getElementById("updatesSliderImage");
+const visitorCount = document.getElementById("visitorCount");
 
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
@@ -54,11 +56,27 @@ if (resultLine && resultSubline) {
   }, 3000);
 }
 
-if (campusSliderImage) {
-  const campusImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg"];
-  let campusIndex = 0;
+if (admissionSliderImage) {
+  const admissionImages = ["Admissionopen1.jpeg", "Admissionopen2.jpeg"];
+  let admissionIndex = 0;
   setInterval(() => {
-    campusIndex = (campusIndex + 1) % campusImages.length;
-    campusSliderImage.src = campusImages[campusIndex];
+    admissionIndex = (admissionIndex + 1) % admissionImages.length;
+    admissionSliderImage.src = admissionImages[admissionIndex];
   }, 2000);
+}
+
+if (updatesSliderImage) {
+  const updatesImages = ["Media1.jpeg", "image1.jpeg", "image2.jpeg", "image3.jpeg"];
+  let updatesIndex = 0;
+  setInterval(() => {
+    updatesIndex = (updatesIndex + 1) % updatesImages.length;
+    updatesSliderImage.src = updatesImages[updatesIndex];
+  }, 2000);
+}
+
+if (visitorCount) {
+  const key = "nasa_total_visitors";
+  const current = Number(localStorage.getItem(key) || "0") + 1;
+  localStorage.setItem(key, String(current));
+  visitorCount.textContent = String(current);
 }
