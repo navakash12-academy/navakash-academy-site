@@ -8,7 +8,6 @@ const admissionSliderImage = document.getElementById("admissionSliderImage");
 const updatesSliderImage = document.getElementById("updatesSliderImage");
 const pressSliderImage = document.getElementById("pressSliderImage");
 const campusBuildingSlider = document.getElementById("campusBuildingSlider");
-const selectedTopImage = document.getElementById("selectedTopImage");
 const visitorCount = document.getElementById("visitorCount");
 const brandTicker = document.getElementById("brandTicker");
 
@@ -93,15 +92,6 @@ if (pressSliderImage) {
   setInterval(() => {
     pressIndex = (pressIndex + 1) % pressImages.length;
     pressSliderImage.src = pressImages[pressIndex];
-  }, 2000);
-}
-
-if (selectedTopImage) {
-  const selectedImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "nasa-fee-pamphlet.png"];
-  let selectedIndex = 0;
-  setInterval(() => {
-    selectedIndex = (selectedIndex + 1) % selectedImages.length;
-    selectedTopImage.src = selectedImages[selectedIndex];
   }, 2000);
 }
 
