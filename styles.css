@@ -543,6 +543,15 @@ h1 {
   color: var(--muted);
 }
 
+.visitor-chip {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .footer-wrap a {
   text-decoration: none;
   color: #1b2f7a;
