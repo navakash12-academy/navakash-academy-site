@@ -292,6 +292,15 @@ h1 {
   font-size: 0.94rem;
 }
 
+.gallery-photo {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin: 2px 0 10px;
+}
+
 .program-link {
   display: inline-block;
   margin: 0 0 10px;
@@ -328,6 +337,21 @@ h1 {
 
 .batch-points li {
   margin-bottom: 6px;
+}
+
+.campus-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.campus-photo-grid img {
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
 }
 
 .badges {
@@ -599,6 +623,10 @@ h1 {
   }
 
   .selected-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-photo-grid {
     grid-template-columns: 1fr;
   }
 
