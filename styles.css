@@ -121,16 +121,21 @@ h1 {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.admission-slider-image {
+.admission-slider-frame {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: contain;
-  display: block;
   background: #fff;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.22);
+  overflow: hidden;
   margin: 0 0 12px;
+}
+
+.admission-slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .hero-actions {
@@ -667,7 +672,7 @@ h1 {
     height: auto;
   }
 
-  .admission-slider-image {
+  .admission-slider-frame {
     aspect-ratio: 4 / 3;
   }
 
