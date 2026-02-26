@@ -219,6 +219,17 @@ h1 {
   margin: 0 0 12px;
 }
 
+.press-slider-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin: 2px 0 10px;
+}
+
 .hero-academy-image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -646,6 +657,10 @@ h1 {
   }
 
   .updates-slider-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .press-slider-image {
     aspect-ratio: 4 / 3;
   }
 

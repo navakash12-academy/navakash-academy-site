@@ -6,6 +6,7 @@ const resultLine = document.getElementById("resultLine");
 const resultSubline = document.getElementById("resultSubline");
 const admissionSliderImage = document.getElementById("admissionSliderImage");
 const updatesSliderImage = document.getElementById("updatesSliderImage");
+const pressSliderImage = document.getElementById("pressSliderImage");
 const visitorCount = document.getElementById("visitorCount");
 
 if (menuBtn && navLinks) {
@@ -66,11 +67,20 @@ if (admissionSliderImage) {
 }
 
 if (updatesSliderImage) {
-  const updatesImages = ["Media1.jpeg", "Media2.jpeg", "Media3.jpeg", "Media4.jpeg", "Media5.jpeg"];
+  const updatesImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg"];
   let updatesIndex = 0;
   setInterval(() => {
     updatesIndex = (updatesIndex + 1) % updatesImages.length;
     updatesSliderImage.src = updatesImages[updatesIndex];
+  }, 2000);
+}
+
+if (pressSliderImage) {
+  const pressImages = ["Media1.jpeg", "Media2.jpeg", "Media3.jpeg", "Media4.jpeg", "Media5.jpeg"];
+  let pressIndex = 0;
+  setInterval(() => {
+    pressIndex = (pressIndex + 1) % pressImages.length;
+    pressSliderImage.src = pressImages[pressIndex];
   }, 2000);
 }
 
