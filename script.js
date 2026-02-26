@@ -85,8 +85,20 @@ if (pressSliderImage) {
 }
 
 if (visitorCount) {
-  const key = "nasa_total_visitors";
-  const current = Number(localStorage.getItem(key) || "0") + 1;
-  localStorage.setItem(key, String(current));
-  visitorCount.textContent = String(current);
+  const storageKeys = ["nasa_total_visitors", "visitor_count", "totalVisitors"];
+  const sessionKey = "nasa_visitor_counted_session";
+  const storedValues = storageKeys
+    .map((key) => Number(localStorage.getItem(key) || "0"))
+    .filter((value) => Number.isFinite(value) && value >= 0);
+
+  let current = storedValues.length ? Math.max(...storedValues) : 0;
+
+  // Increment once per browser session, but keep total in persistent localStorage.
+  if (!sessionStorage.getItem(sessionKey)) {
+    current += 1;
+    sessionStorage.setItem(sessionKey, "1");
+  }
+
+  storageKeys.forEach((key) => localStorage.setItem(key, String(current)));
+  visitorCount.textContent = current.toLocaleString("en-IN");
 }
