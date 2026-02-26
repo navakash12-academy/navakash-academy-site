@@ -630,6 +630,14 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .campus-photo-grid img {
+    height: 70px;
+  }
+
+  .selected-card img {
+    height: 120px;
+  }
+
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start;
