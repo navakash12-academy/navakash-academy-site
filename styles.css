@@ -123,9 +123,10 @@ h1 {
 
 .admission-slider-image {
   width: 100%;
-  aspect-ratio: 16 / 9;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
+  background: transparent;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   margin: 0 0 12px;
@@ -663,10 +664,6 @@ h1 {
   .hero-academy-image {
     aspect-ratio: 4 / 3;
     height: auto;
-  }
-
-  .admission-slider-image {
-    aspect-ratio: 4 / 3;
   }
 
   .hero-metrics {
