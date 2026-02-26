@@ -66,7 +66,7 @@ if (admissionSliderImage) {
 }
 
 if (updatesSliderImage) {
-  const updatesImages = ["Media1.jpeg", "image1.jpeg", "image2.jpeg", "image3.jpeg"];
+  const updatesImages = ["Media1.jpeg", "Media2.jpeg", "Media3.jpeg", "Media4.jpeg", "Media5.jpeg"];
   let updatesIndex = 0;
   setInterval(() => {
     updatesIndex = (updatesIndex + 1) % updatesImages.length;
