@@ -7,7 +7,10 @@ const resultSubline = document.getElementById("resultSubline");
 const admissionSliderImage = document.getElementById("admissionSliderImage");
 const updatesSliderImage = document.getElementById("updatesSliderImage");
 const pressSliderImage = document.getElementById("pressSliderImage");
+const campusBuildingSlider = document.getElementById("campusBuildingSlider");
+const selectedTopImage = document.getElementById("selectedTopImage");
 const visitorCount = document.getElementById("visitorCount");
+const brandTicker = document.getElementById("brandTicker");
 
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
@@ -58,11 +61,20 @@ if (resultLine && resultSubline) {
 }
 
 if (admissionSliderImage) {
-  const admissionImages = ["Admissionopen1.jpeg", "Admissionopen2.jpeg"];
+  const admissionImages = ["Admissionopen1.jpeg", "Admissionopen2.jpeg", "Admission3.jpeg"];
   let admissionIndex = 0;
   setInterval(() => {
     admissionIndex = (admissionIndex + 1) % admissionImages.length;
     admissionSliderImage.src = admissionImages[admissionIndex];
+  }, 2000);
+}
+
+if (campusBuildingSlider) {
+  const campusBuildingImages = ["academy-building.jpeg", "academy-building2.jpeg"];
+  let campusBuildingIndex = 0;
+  setInterval(() => {
+    campusBuildingIndex = (campusBuildingIndex + 1) % campusBuildingImages.length;
+    campusBuildingSlider.src = campusBuildingImages[campusBuildingIndex];
   }, 2000);
 }
 
@@ -84,6 +96,15 @@ if (pressSliderImage) {
   }, 2000);
 }
 
+if (selectedTopImage) {
+  const selectedImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "nasa-fee-pamphlet.png"];
+  let selectedIndex = 0;
+  setInterval(() => {
+    selectedIndex = (selectedIndex + 1) % selectedImages.length;
+    selectedTopImage.src = selectedImages[selectedIndex];
+  }, 2000);
+}
+
 if (visitorCount) {
   const storageKeys = ["nasa_total_visitors", "visitor_count", "totalVisitors"];
   const sessionKey = "nasa_visitor_counted_session";
@@ -101,4 +122,13 @@ if (visitorCount) {
 
   storageKeys.forEach((key) => localStorage.setItem(key, String(current)));
   visitorCount.textContent = current.toLocaleString("en-IN");
+}
+
+if (brandTicker) {
+  const brandNames = ["NASA PUBLIC SCHOOL", "NAV AKASH SAINIK ACADEMY [NASA]"];
+  let brandIndex = 0;
+  setInterval(() => {
+    brandIndex = (brandIndex + 1) % brandNames.length;
+    brandTicker.textContent = brandNames[brandIndex];
+  }, 2000);
 }
