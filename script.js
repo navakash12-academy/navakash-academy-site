@@ -4,7 +4,7 @@ const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 const resultLine = document.getElementById("resultLine");
 const resultSubline = document.getElementById("resultSubline");
-const brandTicker = document.getElementById("brandTicker");
+const campusSliderImage = document.getElementById("campusSliderImage");
 
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
@@ -54,11 +54,11 @@ if (resultLine && resultSubline) {
   }, 3000);
 }
 
-if (brandTicker) {
-  const brandNames = ["NASA Public School", "NAV AKASH SAINIK ACADEMY"];
-  let brandIndex = 0;
+if (campusSliderImage) {
+  const campusImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg"];
+  let campusIndex = 0;
   setInterval(() => {
-    brandIndex = (brandIndex + 1) % brandNames.length;
-    brandTicker.textContent = brandNames[brandIndex];
+    campusIndex = (campusIndex + 1) % campusImages.length;
+    campusSliderImage.src = campusImages[campusIndex];
   }, 2000);
 }
