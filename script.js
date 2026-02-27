@@ -7,7 +7,9 @@ const resultSubline = document.getElementById("resultSubline");
 const admissionSliderImage = document.getElementById("admissionSliderImage");
 const updatesSliderImage = document.getElementById("updatesSliderImage");
 const pressSliderImage = document.getElementById("pressSliderImage");
+const gamesSliderImage = document.getElementById("gamesSliderImage");
 const campusBuildingSlider = document.getElementById("campusBuildingSlider");
+const selectedTopImage = document.getElementById("selectedTopImage");
 const visitorCount = document.getElementById("visitorCount");
 const brandTicker = document.getElementById("brandTicker");
 
@@ -92,6 +94,24 @@ if (pressSliderImage) {
   setInterval(() => {
     pressIndex = (pressIndex + 1) % pressImages.length;
     pressSliderImage.src = pressImages[pressIndex];
+  }, 2000);
+}
+
+if (gamesSliderImage) {
+  const gameImages = ["Game.jpg", "Game1.jpg", "Game2.jpg", "Game3.jpg", "Game4.jpg", "Game5.jpg", "Game6.jpg", "Game7.jpg", "Game8.jpg"];
+  let gameIndex = 0;
+  setInterval(() => {
+    gameIndex = (gameIndex + 1) % gameImages.length;
+    gamesSliderImage.src = gameImages[gameIndex];
+  }, 2000);
+}
+
+if (selectedTopImage) {
+  const selectedImages = ["select1.jpg", "select2.jpg", "select3.jpg", "select4.jpg", "select5.jpg", "select6.jpg"];
+  let selectedIndex = 0;
+  setInterval(() => {
+    selectedIndex = (selectedIndex + 1) % selectedImages.length;
+    selectedTopImage.src = selectedImages[selectedIndex];
   }, 2000);
 }
 
