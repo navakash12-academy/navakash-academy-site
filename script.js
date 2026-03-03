@@ -80,7 +80,7 @@ if (campusBuildingSlider) {
 }
 
 if (updatesSliderImage) {
-  const updatesImages = ["image1.jpeg", "image2.jpeg", "image3.jpeg"];
+  const updatesImages = ["Holi.jpeg", "image1.jpeg", "image2.jpeg", "image3.jpeg"];
   let updatesIndex = 0;
   setInterval(() => {
     updatesIndex = (updatesIndex + 1) % updatesImages.length;
